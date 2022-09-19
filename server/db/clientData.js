@@ -1,6 +1,6 @@
 const connection = require('./connection')
 
-function getclientData(db = connection) {
+function getClientData(db = connection) {
   return db('clientData').select()
 }
 
@@ -22,4 +22,5 @@ function addClientData(clientData, db = connection) {
 
 module.exports = {
   addClientData,
+  getClientData,
 }

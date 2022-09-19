@@ -7,12 +7,12 @@ function ClientForm() {
 
   return (
     <>
-      <div className="w-3/4 flex flex-row justify-around align-center bg-yellow-100 py-6 rounded-lg">
+      <div className=" w-3/4 flex flex-col justify-around align-center bg-yellow-100 py-6 rounded-lg">
         <div>
           <div>
             <label
               htmlFor="small-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="block mb-2 text-sm font-medium text-black-900 dark:text-black-300"
             >
               Full name:
             </label>
@@ -26,7 +26,7 @@ function ClientForm() {
         <div>
           <label
             htmlFor="small-input"
-            className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            className="block mb-2 text-sm font-medium text-gray-900 dark:text-black-300"
           >
             Email:
           </label>
@@ -50,7 +50,7 @@ function ClientForm() {
             />
             <label
               htmlFor="country-option-2"
-              className="block ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              className="block ml-2 text-sm font-medium text-gray-900 dark:text-black-300"
             >
               Money trouble (Work and Income, credit and debt, fines and court
               fines, problems with goods and services)

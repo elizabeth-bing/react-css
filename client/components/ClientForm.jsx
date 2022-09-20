@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { sendClientData } from '../actions'
+import { useNavigate } from 'react-router-dom'
 
 function ClientForm() {
   // const fruits = useSelector((state) => state.fruits)
@@ -21,6 +22,7 @@ function ClientForm() {
   }
   const [form, setForm] = useState(initialData)
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   function handleChange(e) {
     console.log('I am e.target', e.target.value)
@@ -31,12 +33,16 @@ function ClientForm() {
   function handleSubmit(e) {
     e.preventDefault()
     dispatch(sendClientData(form))
-    //setForm(initialData)
+    navigate(`/thankyou`)
+    //insert redirect to here - link back to home page or a thank you page with estimated time frames
   }
 
   return (
     <>
       <div className=" w-3/4 flex flex-col justify-around align-center bg-yellow-100 py-6 rounded-lg">
+        <h1 className="text-3xl font-bold text-neutral-800 py-6">
+          How can we help you today?
+        </h1>
         <form onSubmit={handleSubmit}>
           <div>
             <div>

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import ClientForm from './ClientForm'
 import { addClientData } from '../apis/clientData'
+import { Routes, Route } from 'react-router-dom'
+import Thankyou from './Thankyou'
 
 const App = () => {
   useEffect(() => {
@@ -28,10 +30,10 @@ const App = () => {
 
   return (
     <div className="flex flex-col  items-center bg-sky-200 h-screen w-screen">
-      <h1 className="text-3xl font-bold text-neutral-800 py-6">
-        How can we help you today?
-      </h1>
-      <ClientForm />
+      <Routes>
+        <Route path="/clientform" element={<ClientForm />} />
+        <Route path="/thankyou" element={<Thankyou />} />
+      </Routes>
     </div>
   )
 }

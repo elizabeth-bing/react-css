@@ -1,17 +1,4 @@
-const initialClientState = [
-  {
-    id: '',
-    name: '',
-    email: '',
-    areaOfLaw: '',
-    parties: '',
-    details: '',
-    outcome: '',
-    contractQ: '',
-    file: '',
-    anythingElse: '',
-  },
-]
+const initialClientState = []
 
 const clientDataReducer = (state = initialClientState, action) => {
   const { type, payload } = action
